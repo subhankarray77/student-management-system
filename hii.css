@@ -1,0 +1,500 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar .logo {
+  color: rgb(206, 239, 106);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+/* Hero Section */
+.hero {
+  background: rgb(3, 11, 119);
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  opacity: 0; /* Initially hidden for animation */
+  animation: fadeInUp 1.5s forwards; /* Animation applied */
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeInUp 2s forwards; /* Slight delay for the paragraph */
+}
+
+.hero-button {
+  background-color: #00bcd4;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #0097a7;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Courses Section Styling */
+/* Course Section */
+.course-section {
+  background-color: #f4f4f4;  /* Light background color */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.course-section h2 {
+  font-size: 2.5rem;
+  color: #333;  /* Dark text for contrast */
+  margin-bottom: 40px;
+}
+
+.course-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));  /* Responsive grid layout */
+  gap: 30px;
+}
+
+.course {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course h3 {
+  font-size: 1.8rem;
+  color: #00796b;  /* Teal for course title */
+  margin-bottom: 15px;
+}
+
+.course p {
+  font-size: 1rem;
+  color: #555;  /* Lighter grey text for description */
+  margin-bottom: 20px;
+}
+
+.course button {
+  background-color: #00796b;  /* Teal background for button */
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.course button:hover {
+  background-color: #004d40;  /* Darker teal on hover */
+}
+
+/* Hover effect for course cards */
+.course:hover {
+  transform: translateY(-5px);  /* Slight lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);  /* Stronger shadow on hover */
+}
+
+/* Attendance Section Styling */
+/* Attendance Section */
+.attendance-section {
+  background-color: #fafafa;  /* Light background color for the section */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.attendance-section h2 {
+  font-size: 2.5rem;
+  color: #333;  /* Dark text color for the heading */
+  margin-bottom: 30px;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;  /* White background for the table */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow for the table */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.attendance-table th {
+  background-color: #00796b;  /* Teal background for table headers */
+  color: white;  /* White text color for table headers */
+}
+
+.attendance-table td {
+  background-color: #f9f9f9;  /* Light background for table rows */
+  color: #333;  /* Dark text for table rows */
+}
+
+.attendance-table tr:nth-child(even) td {
+  background-color: #e0f2f1;  /* Light teal background for even rows */
+}
+
+.attendance-table tr:nth-child(odd) td {
+  background-color: #f9f9f9;  /* Light gray background for odd rows */
+}
+
+.attendance-table tr:hover {
+  background-color: #00796b;  /* Dark teal background on hover */
+  color: white;  /* Change text color to white on hover */
+}
+
+.attendance-table td {
+  transition: background-color 0.3s ease, color 0.3s ease;  /* Smooth transition on hover */
+}
+
+
+/* Grades Section Styling */
+/* Grades Section */
+.grades-section {
+  background-color: #f9f9f9;  /* Light background color for the section */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.grades-section h2 {
+  font-size: 2.5rem;
+  color: #333;  /* Dark color for the heading */
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-transform: uppercase;  /* Make the heading bold and uppercase */
+  letter-spacing: 1px;  /* Slight letter spacing for better readability */
+}
+
+.grades-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;  /* White background for the table */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow for the table */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.grades-table th,
+.grades-table td {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.grades-table th {
+  background-color: #00796b;  /* Teal background for table headers */
+  color: white;  /* White text color for table headers */
+  font-weight: bold;
+}
+
+.grades-table td {
+  background-color: #f9f9f9;  /* Light background for table rows */
+  color: #333;  /* Dark text for table rows */
+}
+
+.grades-table tr:nth-child(even) td {
+  background-color: #e0f2f1;  /* Light teal background for even rows */
+}
+
+.grades-table tr:nth-child(odd) td {
+  background-color: #f9f9f9;  /* Light gray background for odd rows */
+}
+
+.grades-table td {
+  transition: background-color 0.3s ease, color 0.3s ease;  /* Smooth transition on hover */
+}
+
+/* Grade Styling */
+.grades-table td:nth-child(3) {
+  font-weight: bold;  /* Bold text for grades */
+  color: #333;  /* Default color for grades */
+}
+
+.grades-table td:nth-child(3):contains('A') {
+  color: #4caf50;  /* Green for 'A' grades */
+}
+
+.grades-table td:nth-child(3):contains('B+') {
+  color: #ff9800;  /* Orange for 'B+' grades */
+}
+
+.grades-table td:nth-child(3):contains('B') {
+  color: #ff5722;  /* Red for 'B' grades */
+}
+
+.grades-table td:nth-child(3):contains('A-') {
+  color: #8bc34a;  /* Light green for 'A-' grades */
+}
+
+/* Hover effect */
+.grades-table tr:hover {
+  background-color: #00796b;  /* Dark teal background on hover */
+  color: white;  /* Change text color to white on hover */
+}
+
+
+
+/* About Section Styling */
+/* About Section */
+.about-section {
+  background-color: #f4f4f4;  /* Light background for the section */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2.8rem;
+  color: #333;  /* Dark color for the main heading */
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;  /* Uppercase for emphasis */
+}
+
+.about-paragraph {
+  font-size: 1.2rem;
+  color: #555;  /* Light grey text for the paragraph */
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.team-member {
+  text-align: center;
+  width: 200px;  /* Fixed width for each team member */
+  margin-bottom: 40px;
+}
+
+.team-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;  /* Circular profile images */
+  border: 5px solid #00796b;  /* Teal border around the image */
+  transition: transform 0.3s ease;
+}
+
+.team-photo:hover {
+  transform: scale(1.1);  /* Slight zoom effect on hover */
+}
+
+.team-name {
+  font-size: 1.2rem;
+  color: #00796b;  /* Teal color for team member names */
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .team-members {
+      flex-direction: column;  /* Stack team members vertically on smaller screens */
+  }
+}
+
+/* Contact Section Styling */
+/* Contact Section */
+.contact-section {
+  background-color: #f2f2f2;  /* Light gray background for the section */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2.8rem;
+  color: #333;  /* Dark color for the heading */
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;  /* Uppercase for emphasis */
+}
+
+.contact-section p {
+  font-size: 1.2rem;
+  color: #555;  /* Light gray text for the introductory paragraph */
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Contact Form */
+.contact-form {
+  display: grid;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;  /* White background for the form */
+  padding: 30px;
+  border-radius: 8px;  /* Rounded corners for the form */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+}
+
+.contact-form label {
+  font-size: 1.1rem;
+  color: #333;  /* Dark text color for labels */
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;  /* Light border color */
+  border-radius: 4px;  /* Rounded corners for input fields */
+  box-sizing: border-box;  /* Ensure padding does not affect width */
+  transition: border-color 0.3s ease;  /* Smooth transition for focus effect */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #00796b;  /* Highlight border with teal when focused */
+  outline: none;  /* Remove outline on focus */
+}
+
+.contact-form button {
+  background-color: #00796b;  /* Teal background for the button */
+  color: white;  /* White text on the button */
+  font-size: 1.2rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;  /* Rounded corners for the button */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #004d40;  /* Darker teal on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-form {
+      padding: 20px;
+  }
+}
+/* Footer Styling */
+.footer {
+  background-color: #333;  /* Dark background for the footer */
+  color: #fff;  /* White text */
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #fff;  /* White color for the links */
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;  /* Underline on hover */
+  color: #00796b;  /* Change link color to teal on hover */
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+  .footer-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+  }
+  
+  .footer-links a {
+      margin-bottom: 10px;
+  }
+}
